@@ -29,6 +29,7 @@ class Cucce{
     public $who;
     public $type;
     public $prezzo;
+    use Ciao;
 
     function __construct($_who, $_type, $_prezzo){
         $this->who = $_who;
@@ -66,6 +67,16 @@ $arrayGiochi = [
     $pallinaCane,
     $pallinaGatto
 ];
+
+trait Ciao {
+    public $string;
+
+    function getString($stringa){
+        return $stringa;
+    }
+};
+
+throw new Exception("Ciao questo è un errore");
 
 
 ?>
